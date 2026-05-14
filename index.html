@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONIKAGE | Shadow of Iki</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Noto+Sans+JP:wght@100;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #050505;
+            --text: #e0e0e0;
+            --accent: #bc1818;
+            --gold: #c5a059;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Playfair Display', serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Hero Section with your Cover Image */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* LINK TO YOUR IMAGE */
+            background: linear-gradient(rgba(0,0,0,0.5), var(--bg)), url('./image_183640.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: clamp(3.5rem, 12vw, 7rem);
+            font-weight: 900;
+            letter-spacing: clamp(10px, 2vw, 20px);
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            letter-spacing: 8px;
+            color: var(--gold);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Story Beats */
+        .story-section {
+            padding: 120px 10%;
+            text-align: center;
+            position: relative;
+        }
+
+        .kanji-bg {
+            position: absolute;
+            font-family: 'Noto Sans JP';
+            font-size: clamp(10rem, 30vw, 20rem);
+            color: rgba(255,255,255,0.02);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .story-text {
+            font-size: clamp(1.4rem, 3vw, 2.2rem);
+            max-width: 900px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        .accent-bar {
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin: 30px auto;
+        }
+
+        /* Video Frame with your Video Link */
+        .video-wrap {
+            padding: 80px 5%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            border: 1px solid #222;
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+
+        video { 
+            width: 100%; 
+            display: block; 
+            outline: none;
+        }
+
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid #111;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        /* Animation class for JS */
+        [data-aos] { pointer-events: none; }
+        .visible { pointer-events: auto; }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div data-aos="fade-down" data-aos-duration="1000" class="subtitle">Iki Island - Late 13th Century</div>
+        <h1 data-aos="zoom-in" data-aos-duration="1500">ONIKAGE</h1>
+        <div data-aos="fade-up" data-aos-duration="1200" class="accent-bar"></div>
+        <p data-aos="fade-up" data-aos-delay="500" style="font-size: 0.9rem; opacity: 0.5;">SCROLL TO WITNESS</p>
+    </section>
+
+    <section class="story-section">
+        <div class="kanji-bg">壱</div>
+        <p class="story-text" data-aos="fade-right" data-aos-duration="1000">
+            Before the Mongols, the island was bled dry by <span style="color:var(--accent)">ruthless bandits</span>. 
+            They ruled with fear, and the people prayed for a miracle.
+        </p>
+    </section>
+
+    <section class="story-section" style="background: #080808;">
+        <div class="kanji-bg">侍</div>
+        <p class="story-text" data-aos="fade-left" data-aos-duration="1000">
+            Out of the mist stepped a <span style="color:var(--accent)">nameless shadow</span>. 
+            Draped in armor as black as night, he came not to save souls, but to take them.
+        </p>
+    </section>
+
+    <section class="video-wrap">
+        <div class="video-container" data-aos="zoom-in-up" data-aos-duration="1200">
+            <video controls playsinline poster="./image_183640.jpg">
+                <source src="./Late 13th Century.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <p>FORGED BY PRATIKSH GURUNG | B.DESIGN ANIMATION & GAMING</p>
+        <p style="margin-top: 10px; font-size: 0.7rem; opacity: 0.4;">© 2026 THE SHADOW OF IKI PROJECT</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
